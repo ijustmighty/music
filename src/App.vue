@@ -1,26 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<div class="new-app">
+		<div class="music-app">
+			<!-- <music-menu></music-menu>  -->
+			<!-- <music-info></music-info> -->
+			<music-base/>
+		</div>
+		<div class="music-bars">
+			<music-bar/>
+		</div>
+	</div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import MusicMenu from './components/MusicMenu.vue';
+// import MusicInfo from './components/MusicInfo.vue'; 
+import MusicBase from './components/MusicBase.vue';
+import MusicBar from './components/MusicBar.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	components: {
+		// 'music-menu': MusicMenu, 
+		// 'music-info': MusicInfo,
+		'music-base': MusicBase,
+		'music-bar': MusicBar,
+	},
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+.new-app {
+	background: linear-gradient(180deg, #672fa0, #3167BF);
 }
+
+.music-app {
+	height: 100%;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.music-bars {
+	justify-content: center;
+	padding: 0 15px 15px 15px;
+}
+
 </style>
